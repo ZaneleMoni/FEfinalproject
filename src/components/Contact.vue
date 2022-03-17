@@ -33,7 +33,8 @@
       </div>
 
       <div class="form">
-        <form @submit.prevent="handleSubmit"
+        <form
+          @submit.prevent="handleSubmit"
           action="forms/contact.php"
           method="post"
           role="form"
@@ -42,7 +43,7 @@
           <div class="row">
             <div class="col-md-6 form-group">
               <input
-              v-model="name"
+                v-model="name"
                 type="text"
                 name="name"
                 class="form-control"
@@ -54,7 +55,7 @@
             </div>
             <div class="col-md-6 form-group mt-3 mt-md-0">
               <input
-              v-model="email"
+                v-model="email"
                 type="email"
                 class="form-control"
                 name="email"
@@ -67,7 +68,7 @@
           </div>
           <div class="form-group mt-3">
             <input
-            v-model="subject"
+              v-model="subject"
               type="text"
               class="form-control"
               name="subject"
@@ -78,7 +79,7 @@
           </div>
           <div class="form-group mt-3">
             <textarea
-            v-model="message"
+              v-model="message"
               class="form-control"
               name="message"
               rows="5"
@@ -104,43 +105,36 @@
 
 <script>
 export default {
-    data() {
-     return {
-       name: '',
-       email: '',
-       subject: '',
-       message: ''
-     }
-   },
-   methods: {
-     handleSubmit() {
-       console.log(this.email, this.name, this.message, this.subject),
-
-       fetch('https://my-blogyy.herokuapp.com/contact', {
-  method: 'POST',
-  body: JSON.stringify({
-    name: this.name,
-    email: this.email,
-    subject: this.subject,
-    message: this.message,
-  }),
-  headers: {
-    'Content-type': 'application/json; charset=UTF-8',
+  data() {
+    return {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    };
   },
-})
-  .then((response) => response.json())
-  .then((json) => {
-    alert(json.msg)
-    this.name = '',
-    this.email = '',
-    this.subject = '',
-    this.message = ''
-    })
-  .catch((e) => alert(e.msg));
-     }
-   },
-}
-
+  methods: {
+    handleSubmit() {
+      console.log(this.email, this.name, this.message, this.subject);
+      let contacts = {
+            name: this.name,
+            email: this.email,
+            subject: this.subject,
+            message: this.message,
+          };
+        fetch("https://my-blogyy.herokuapp.com/contacts", {
+          method: "POST",
+          body: JSON.stringify(contacts),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        })
+          .then((response) => response.json())
+          .then((json) =>  alert(json.msg))
+          .catch((e) => alert(e.msg));
+    },
+  },
+};
 </script>
 
 <style Scoped>
