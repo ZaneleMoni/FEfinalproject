@@ -19,7 +19,7 @@
           <div class="contact-phone">
             <i class="bi bi-phone"></i>
             <h3>Phone Number</h3>
-            <p><a href="tel:+155895548855">+27 62 455 4898</a></p>
+            <p><a href="tel:+27624334358">+27 62 455 4898</a></p>
           </div>
         </div>
 
@@ -27,7 +27,7 @@
           <div class="contact-email">
             <i class="bi bi-envelope"></i>
             <h3>Email</h3>
-            <p><a href="mailto:info@example.com">beehlongwane@gmail.com</a></p>
+            <p><a href="mailto:zanelemoni4@gmail.com">zanelemoni4@gmail.com</a></p>
           </div>
         </div>
       </div>
@@ -117,30 +117,33 @@ export default {
     handleSubmit() {
       console.log(this.email, this.name, this.message, this.subject);
       let contacts = {
-            name: this.name,
-            email: this.email,
-            subject: this.subject,
-            message: this.message,
-          };
-        fetch("https://my-blogyy.herokuapp.com/contacts", {
-          method: "POST",
-          body: JSON.stringify(contacts),
-          headers: {
-            "Content-type": "application/json; charset=UTF-8",
-          },
-        })
-          .then((response) => response.json())
-          .then((json) =>  alert(json.msg))
-          .catch((e) => alert(e.msg));
+        name: this.name,
+        email: this.email,
+        subject: this.subject,
+        message: this.message,
+      };
+      fetch("https://my-blogyy.herokuapp.com/contacts", {
+        method: "POST",
+        body: JSON.stringify(contacts),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => alert(json.msg))
+        .catch((e) => alert(e.msg));
     },
   },
 };
 </script>
 
 <style Scoped>
+.form {
+  margin-bottom: 5rem;
+}
 #contact {
-  margin-right: 10%;
-  margin-left: 10%;
+  margin-right: 20%;
+  margin-left: 20%;
 }
 h2 {
   text-align: center;

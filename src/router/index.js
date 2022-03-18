@@ -6,6 +6,7 @@ import Contact from '../components/Contact.vue'
 import More from '../components/More'
 import Login from '../components/Login.vue'
 import Register from "../components/Register.vue";
+import Profile from "../components/Profile.vue"
 
 
 const routes = [
@@ -17,7 +18,7 @@ const routes = [
   {
     path: "/about",
     name: "About",
-   component: About,
+    component: About,
   },
   {
     path: "/blogs",
@@ -30,19 +31,25 @@ const routes = [
     component: Contact,
   },
   {
-    path: "/more",
-    name: "More",
-    component: More,
-  },
-  {
     path: "/login",
     name: "Login",
     component: Login,
   },
   {
+    path: "/more",
+    name: "More",
+    component: More,
+  },
+
+  {
     path: "/register",
     name: "Register",
     component: Register,
+  },
+  {
+    path: "/profile",
+    name: "Profile",
+    component: Profile,
   },
 ];
 

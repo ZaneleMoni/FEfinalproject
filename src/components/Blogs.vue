@@ -17,7 +17,7 @@
       </div>
     </div>
   </div>
-                   <button
+           <button
                 type="button"
                 class="btn mt-4 button-body"
                 data-bs-toggle="modal"
@@ -27,19 +27,18 @@
               </button>
 
               <!-- Modal -->
+              <form method="post">
               <div
                 class="modal fade"
                 id="addBlogModal"
-                tabindex="-1"
+                tabindex="1"
                 aria-labelledby="exampleModalLabel"
                 aria-hidden="true"
               >
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <button class="modal-title" id="exampleModalLabel">
-                        Add a Blog
-                      </button>
+                      
                       <button
                         type="button"
                         class="btn-close"
@@ -61,14 +60,14 @@
                       <div class="mb-3">
                         <label class="form-label">Content</label>
                         <input
-                          class="form-select"
+                          class="form-control"
                           name="addCategory"
                           id="addCategory"
                           v-model="content"
                         >
                       </div>
                      
-                      <div class="mb-3">
+                      <div class="mb-6">
                         <label for="addImg" class="form-label">Image</label>
                         <input
                           class="form-control"
@@ -79,6 +78,7 @@
                         />
                       </div>
                     </div>
+                    
                     <div class="modal-footer">
                       <button
                         type="button"
@@ -87,18 +87,36 @@
                       >
                         Close
                       </button>
+                      
                       <button
                         type="button"
                         class="btn btn-primary"
                         data-bs-dismiss="modal"
                        v-on:click="createBlog()"
                       >
-                        Create Blog
+                       Add Blog
+                      </button>
+                       <button
+                        type="button"
+                        class="btn btn-danger"
+                        data-bs-dismiss="modal"
+                       v-on:click="createBlog()"
+                      >
+                       Delete Blog
+                      </button>
+                       <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-dismiss="modal"
+                       v-on:click="createBlog()"
+                      >
+                       Add Blog
                       </button>
                     </div>
                   </div>
                 </div>
               </div>
+              </form>
 </template>
 
 <script>
