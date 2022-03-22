@@ -55,11 +55,15 @@ methods: {
       },
         })
         .then((response) => response.json())
-        .then((json) => {
-            console.log(json);
+        .then((user) => {
+            console.log(user);
             alert("User Logged in");
-            localStorage.setItem("jwt", json.jwt);
-            this.$router.push({name:"Blogs"})
+            localStorage.setItem("jwt", user.jwt);
+            localStorage.setItem("id", user.id);
+            localStorage.setItem("name", user.name);
+            localStorage.setItem("email", user.email);
+            localStorage.setItem("phone_number",user.phone_number);
+            this.$router.push({name:"Blogs"});
         })
         .catch((error) =>{
             alert(error);

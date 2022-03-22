@@ -7,9 +7,9 @@
           <div class="row align-items-center">
             <div class="col-lg-4">
               <ul class="list-inline mb-0 text-sm">
-                <li class="list-inline-item"><router-link to="/">Home</router-link></li>
+                <li class="list-inline-item"><router-link  active to="/">Home</router-link></li>
                 <li class="list-inline-item"> <router-link to="/about">About</router-link></li>
-                                <li class="list-inline-item"> <router-link to="/login">Login</router-link></li>
+                <li class="list-inline-item"> <router-link to="/login">Login</router-link></li>
                 <li class="list-inline-item"> <router-link to="/register">Register</router-link></li>
                 <li class="list-inline-item"> <router-link to="/profile">Profile</router-link></li>
                 <li class="list-inline-item"> <router-link to="/contact">Contact</router-link></li>

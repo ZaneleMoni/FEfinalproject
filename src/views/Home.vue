@@ -4,16 +4,7 @@
         <div class="container text-center"><a class="navbar-brand mx-auto" href="/"><img class="mb-2" src="https://d19m59y37dris4.cloudfront.net/travel/2-0/img/logo.e2e2db61.svg" alt="" width="140">
             <p class="text-sm text-uppercase text-gray mb-0">Your next pocket travel guide</p></a></div>
       </nav>
-      <!-- Navbar 2 -->
-      <nav class="navbar navbar-expand-lg navbar-light border-gray py-2 bg-light">
-        <div class="container">
-          <button class="navbar-toggler navbar-toggler-right mx-auto border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-          <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto">
-            </ul>
-          </div>
-        </div>
-      </nav>
+     
 
  
 <!--Backpack travellers-->

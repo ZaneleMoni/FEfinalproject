@@ -3,7 +3,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Blogs from '../components/Blogs.vue'
 import Contact from '../components/Contact.vue'
-import More from '../components/More'
+import Paris from '../components/Paris'
 import Login from '../components/Login.vue'
 import Register from "../components/Register.vue";
 import Profile from "../components/Profile.vue"
@@ -36,9 +36,9 @@ const routes = [
     component: Login,
   },
   {
-    path: "/more",
-    name: "More",
-    component: More,
+    path: "/paris",
+    name: "Paris",
+    component: Paris,
   },
 
   {

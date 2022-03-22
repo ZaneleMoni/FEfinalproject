@@ -89,10 +89,10 @@ methods:{
         },
       })
       .then((response)=>response.json())
-      .then((json)=>{
-        console.log(json);
+      .then((user)=>{
+        console.log(user);
         alert("User registered");
-        localStorage.setItem("jwt",json.jwt);
+        localStorage.setItem("jwt",user.jwt);
         this.$router.push({name:"Login"});
       })
       .catch((err)=>{

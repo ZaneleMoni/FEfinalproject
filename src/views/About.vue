@@ -2,15 +2,15 @@
  
     <!-- ======= About Section ======= -->
     <section>
-<div class="row align-items-stretch gx-lg-0">
+<div class="row align-items-stretch gx-lg-0 p-5">
           <div class="col-lg-6 order-2 order-lg-1 bg-full-left">
             <div class="h-100 bg-light d-flex align-items-center">
               <div class="py-5 px-4">
                 <p class="text-primary font-weight-bold small text-uppercase mb-2">Travel guide</p>
                 <h3 class="h4"> <a class="text-reset" href="post.html">Book to inspire your travel</a></h3>
                 <div class="text-muted">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quam nobis autem voluptate illum beatae atque suscipit inventore tenetur, perferendis facere sequi optio laudantium obcaecati aliquam, dolores ea. Pariatur, repellendus.</p>
-                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quam nobis autem voluptate illum beatae atque suscipit inventore tenetur, perferendis facere sequi optio laudantium obcaecati aliquam, dolores ea. Pariatur, repellendus.</p>
+                  <p>Travel is the movement of people between distant geographical locations. Travel can be done by foot, bicycle, automobile, train, boat, bus, airplane, ship or other means, with or without luggage, and can be one way or round trip. Travel can also include relatively short stays between successive movements, as in the case of tourism.</p>
+                  <p>Reasons for traveling include recreation,holidays, rejuvenation,tourism or vacationing,research travel, the gathering of information, visiting people, volunteer travel for charity, migration to begin life somewhere else, religious pilgrimages and mission trips, business travel, trade, commuting, and other reasons, such as to obtain health care or waging or fleeing war or for the enjoyment of traveling. Travelers may use human-powered transport such as walking or bicycling; or vehicles, such as public transport, automobiles, trains, ferries, boats, cruise ships and airplanes. </p>
                 </div>
                 <ul class="list-inline small text-uppercase mb-0">
                   <!-- <li class="list-inline-item align-middle"><img class="rounded-circle shadow-sm" src="https://d19m59y37dris4.cloudfront.net/travel/2-0/img/person-1.57fd03a8.jpg" alt="" width="30"/></li> -->
