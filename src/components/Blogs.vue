@@ -1,11 +1,14 @@
 <template>
-  <div id="blogs">
-    <div class="d-flex container row" v-for="blog of blogs" :key="blog._id">
-      <div class="blog-card col">
-        <div class="blog-tumb col">
+  <div id="blogs p-5">
+    <div class="container">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+    
+         <div class="d-flex container p-5" v-for="blog of blogs" :key="blog._id">
+      <div class="blog-card">
+        <div class="blog-tumb">
           <img :src="blog.img" alt="" />
         </div>
-        <div class="blog-details col">
+        <div class="blog-details">
           <h4>{{ blog.title }}</h4>
           <p>{{ blog.content }}</p>
           <div class="blog-bottom-details col">
@@ -16,7 +19,7 @@
               type="edit"
               class="btn btn-secondary"
               data-bs-edit="blog"
-              @onclick="editBlog()"
+              @click="editBlog()"
             >
               edit
             </button>
@@ -24,7 +27,7 @@
               type="remove"
               class="btn btn-danger"
               data-bs-delete="removeblog"
-              @onclick="removeBlog()"
+              @click="removeBlog()"
             >
               delete
             </button>
@@ -32,6 +35,16 @@
         </div>
       </div>
     </div>
+    
+    <div class="col-6 col-md-4">
+      
+    </div>
+    <div class="col-6 col-md-4">
+   
+    </div>
+  </div>
+</div>
+ 
   </div>
   <button
     type="button"
@@ -44,7 +57,7 @@
 
   <!-- Modal -->
   <div
-    class="modal fade"
+    class="modal fade p-5"
     id="addBlogModal"
     tabindex="1"
     aria-labelledby="exampleModalLabel"
@@ -105,7 +118,7 @@
           </button>
 
           <button
-            type="button"
+            type="button p-5"
             class="btn btn-primary"
             data-bs-dismiss="modal"
             v-on:click="createBlog()"
@@ -129,26 +142,26 @@ export default {
     };
   },
   methods: {
-    // removeBlog(){
-    //   fetch("https://my-blogyy.herokuapp.com/blogs",{
-    //   method:"DELETE",
-    //   headers:{
-    //      "Content-Type": "application/json",
-    //   },
-    //    body: JSON.stringify({
-    //       title: this.title,
-    //       content: this.content,
-    //       img: this.img,
-    //     }),
-    //   })
-    //      .then((response) => response.json())
-    //     .then((data) => {
-    //       console.log("Success:", data);
-    //     })
-    //     .catch((error) => {
-    //       console.error("Error:", error);
-    //     });
-    // },
+    removeBlog(){
+      fetch("https://my-blogyy.herokuapp.com/blogs",{
+      method:"DELETE",
+      headers:{
+         "Content-Type": "application/json",
+      },
+       body: JSON.stringify({
+          title: this.title,
+          content: this.content,
+          img: this.img,
+        }),
+      })
+         .then((response) => response.json())
+        .then((data) => {
+          console.log("Success:", data);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    },
   
     
     createBlog() {

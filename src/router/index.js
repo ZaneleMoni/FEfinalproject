@@ -5,7 +5,7 @@ import Blogs from '../components/Blogs.vue'
 import Contact from '../components/Contact.vue'
 import Paris from '../components/Paris'
 import Login from '../components/Login.vue'
-import Register from "../components/Register.vue";
+import Register from "../components/Register.vue"
 import Profile from "../components/Profile.vue"
 
 
@@ -57,5 +57,14 @@ const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
 })
+
+// router.beforeEach((to, from, next) => {
+//   const publicPages = ['/Login', '/Register', 'Home'];
+//   const authrequired = !publicPages.includes(to.path);
+//   const loggedIn = localStorage.getItem('user');
+
+//   if(to.path == '/Profiles' || to.path == '/Blogs' && !loggedIn) next({name: 'Register'})
+//   else next()
+// });
 
 export default router

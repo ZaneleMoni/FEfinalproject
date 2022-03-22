@@ -24,7 +24,7 @@
                v-model="password"
                placeholder="password" />
             </div>
-            <button class="btn btn-primary mt-4 login" type="submit">Sign in!</button>
+            <button class="btn btn-primary mt-4" type="submit">Sign in!</button>
             </form>
           </div>
         </div>

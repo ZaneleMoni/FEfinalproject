@@ -75,11 +75,6 @@ export default {
   transform: scale(1.5);
 }
 
-.btn {
-  height: 140px;
-  width: 140px;
-  border-radius: 50%;
-}
 
 .name {
   font-size: 22px;
