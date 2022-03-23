@@ -1,50 +1,49 @@
 <template>
   <div id="blogs p-5">
     <div class="container">
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
-    
-         <div class="d-flex container p-5" v-for="blog of blogs" :key="blog._id">
-      <div class="blog-card">
-        <div class="blog-tumb">
-          <img :src="blog.img" alt="" />
-        </div>
-        <div class="blog-details">
-          <h4>{{ blog.title }}</h4>
-          <p>{{ blog.content }}</p>
-          <div class="blog-bottom-details col">
-            <p class="read-more">
-              <a href="/paris">Read More</a>
-            </p>
-            <button
-              type="edit"
-              class="btn btn-secondary"
-              data-bs-edit="blog"
-              @click="editBlog()"
-            >
-              edit
-            </button>
-            <button
-              type="remove"
-              class="btn btn-danger"
-              data-bs-delete="removeblog"
-              @click="removeBlog()"
-            >
-              delete
-            </button>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+        <div class="d-flex container p-5" v-for="blog of blogs" :key="blog._id">
+          <div class="blog-card">
+            <div class="blog-tumb">
+              <img :src="blog.img" alt="" />
+            </div>
+            <div class="blog-details">
+              <h4>{{ blog.title }}</h4>
+              <p>{{ blog.content }}</p>
+              <div class="blog-bottom-details col">
+                <p class="read-more">
+                  <router-link
+                    :to="{ name: 'SingleBlog', params: { id: blog._id } }"
+                    >Read More</router-link
+                  >
+                </p>
+                <button
+                  type="edit"
+                  class="btn btn-secondary"
+                  data-bs-edit="modal"
+                  data-bs-toggle="modal"
+                  data-bs-target="#addBlogModal"
+                  @click="editBlog()"
+                >
+                  edit
+                </button>
+                <button
+                  type="remove"
+                  class="btn btn-danger"
+                  data-bs-delete="removeblog"
+                  @click="removeBlog()"
+                >
+                  delete
+                </button>
+              </div>
+            </div>
           </div>
         </div>
+
+        <div class="col-6 col-md-4"></div>
+        <div class="col-6 col-md-4"></div>
       </div>
     </div>
-    
-    <div class="col-6 col-md-4">
-      
-    </div>
-    <div class="col-6 col-md-4">
-   
-    </div>
-  </div>
-</div>
- 
   </div>
   <button
     type="button"
@@ -83,15 +82,19 @@
                 name="title"
                 id="addTitle"
                 v-model="title"
+                :disabled="!editBlog"
+                :class="{ view: !editBlog }"
               />
             </div>
             <div class="mb-3">
               <label class="form-label">Content</label>
               <input
                 class="form-control"
-                name="addCategory"
-                id="addCategory"
+                name="content"
+                id="content"
                 v-model="content"
+                :disabled="!editBlog"
+                :class="{ view: !editBlog }"
               />
             </div>
 
@@ -103,6 +106,8 @@
                 name="img"
                 id="addImg"
                 v-model="img"
+                :disabled="!editBlog"
+                :class="{ view: !editBlog }"
               />
             </div>
           </form>
@@ -142,19 +147,19 @@ export default {
     };
   },
   methods: {
-    removeBlog(){
-      fetch("https://my-blogyy.herokuapp.com/blogs",{
-      method:"DELETE",
-      headers:{
-         "Content-Type": "application/json",
-      },
-       body: JSON.stringify({
+    removeBlog() {
+      fetch("https://my-blogyy.herokuapp.com/blogs", {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
           title: this.title,
           content: this.content,
           img: this.img,
         }),
       })
-         .then((response) => response.json())
+        .then((response) => response.json())
         .then((data) => {
           console.log("Success:", data);
         })
@@ -162,8 +167,28 @@ export default {
           console.error("Error:", error);
         });
     },
-  
-    
+
+    editBlog() {
+      fetch("https://my-blogyy.herokuapp.com/blogs", {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          title: this.title,
+          content: this.content,
+          img: this.img,
+        }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Success:", data);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    },
+
     createBlog() {
       console.log(this.title, this.content, this.img);
       fetch("https://my-blogyy.herokuapp.com/blogs", {

@@ -50,7 +50,55 @@
         </div>
       </div>
     </section>
+      <section class="pb-5 p-5">
+      <div class="container pb-4">
+        <header class="text-center mb-5">
+          <h2>Cities You might be interested in</h2>
+          <p>A place for your Instagram pictures or gallery.</p>
+        </header>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 px-md-1 py-1"><a class="instagram-item d-block w-100 reset-anchor text-white" ><img class="img-fluid" src="https://i.postimg.cc/7Y7B0K6j/Paris-Adobe-Stock-264549883-1.jpg" alt="">
+              <div class="instagram-item-overlay p-5">
+                <h6>Paris.</h6>
+              </div></a></div>
 
+         <div class="col-lg-3 col-md-6 px-md-1 py-1"><a class="instagram-item d-block w-100 h-100 reset-anchor text-white" ><img class="img-fluid" src="https://i.postimg.cc/G2wPLCP2/Tokyo.jpg" alt="">
+              <div class="instagram-item-overlay p-5">
+                <h6>Tokyo.</h6>
+              </div></a></div>
+
+          <div class="col-lg-3 col-md-6 px-md-1 py-1"><a class="instagram-item d-block w-100 h-100 reset-anchor text-white" ><img class="img-fluid" src="https://i.postimg.cc/wjkYcqMK/Moscow.jpg" alt="">
+              <div class="instagram-item-overlay p-5">
+                <h6>Moscow.</h6>
+              </div></a></div>
+
+          <div class="col-lg-3 col-md-6 px-md-1 py-1"><a class="instagram-item d-block w-100 h-100 reset-anchor text-white" ><img class="img-fluid" src="https://i.postimg.cc/bwyBPQyM/Dubai1.jpg" alt="">
+              <div class="instagram-item-overlay p-5">
+                <h6>Dubai.</h6>
+              </div></a></div>
+<!-- 
+          <div class="col-lg-3 col-md-6 px-md-1 py-1"><a class="instagram-item d-block w-100 h-100 reset-anchor text-white" ><img class="img-fluid" src="https://i.postimg.cc/G2wPLCP2/Tokyo.jpg" alt="">
+              <div class="instagram-item-overlay p-5">
+                <h6>Tokyo.</h6>
+              </div></a></div>
+
+          <div class="col-lg-3 col-md-6 px-md-1 py-1"><a class="instagram-item d-block w-100 h-100 reset-anchor text-white" ><img class="img-fluid" src="https://i.postimg.cc/9F8G4TPs/Singapore.jpg" alt="">
+              <div class="instagram-item-overlay p-5">
+                <h6>Singapore.</h6>
+              </div></a></div>
+
+          <div class="col-lg-3 col-md-6 px-md-1 py-1"><a class="instagram-item d-block w-100 h-100  reset-anchor text-white" ><img class="img-fluid" src="https://i.postimg.cc/286WfypG/LA.jpg" alt="">
+              <div class="instagram-item-overlay p-5">
+                <h6>Los Angeles.</h6>
+              </div></a></div>
+
+          <div class="col-lg-3 col-md-6 px-md-1 py-1"><a class="instagram-item d-block w-100 h-100  reset-anchor text-white" ><img class="img-fluid" src="https://i.postimg.cc/NFD3cbHN/Amsterdam.jpg" alt="">
+              <div class="instagram-item-overlay p-5">
+                <h6>Amsterdam.</h6>
+              </div></a></div> -->
+        </div>
+      </div>
+    </section>
     <!-- Travel essentials section -->
     <section class="py-5 bg-light">
       <div class="container py-4">
@@ -59,16 +107,16 @@
           <p>Must haves when travelling</p>
         </header>
         <div class="row text-center">
-          <div class="col-lg-3 col-md-6"><a class="text-reset" href="post.html"><img class="mb-4" src="https://d19m59y37dris4.cloudfront.net/travel/2-0/img/bag.e4c5f0da.png" alt="" height="100">
+          <div class="col-lg-3 col-md-6"><a class="text-reset"><img class="mb-4" src="https://d19m59y37dris4.cloudfront.net/travel/2-0/img/bag.e4c5f0da.png" alt="" height="100">
               <h3 class="h5">Backpack</h3>
               <p class="text-sm text-muted">Deserunt et ad culpa culpa dolore.</p></a></div>
-          <div class="col-lg-3 col-md-6"><a class="text-reset" href="post.html"><img class="mb-4" src="https://d19m59y37dris4.cloudfront.net/travel/2-0/img/camera.3ee186fd.png" alt="" height="100">
+          <div class="col-lg-3 col-md-6"><a class="text-reset"><img class="mb-4" src="https://d19m59y37dris4.cloudfront.net/travel/2-0/img/camera.3ee186fd.png" alt="" height="100">
               <h3 class="h5">Camera</h3>
               <p class="text-sm text-muted">Consectetur ex sunt duis minim quis dolor.</p></a></div>
-          <div class="col-lg-3 col-md-6"><a class="text-reset" href="post.html"><img class="mb-4" src="https://d19m59y37dris4.cloudfront.net/travel/2-0/img/glasses.80147afd.png" alt="" height="100">
+          <div class="col-lg-3 col-md-6"><a class="text-reset" ><img class="mb-4" src="https://d19m59y37dris4.cloudfront.net/travel/2-0/img/glasses.80147afd.png" alt="" height="100">
               <h3 class="h5">Sunglasses</h3>
               <p class="text-sm text-muted">Deserunt et ad culpa culpa dolore.</p></a></div>
-          <div class="col-lg-3 col-md-6"><a class="text-reset" href="post.html"><img class="mb-4" src="https://d19m59y37dris4.cloudfront.net/travel/2-0/img/headphone.cccb2497.png" alt="" height="100">
+          <div class="col-lg-3 col-md-6"><a class="text-reset"><img class="mb-4" src="https://d19m59y37dris4.cloudfront.net/travel/2-0/img/headphone.cccb2497.png" alt="" height="100">
               <h3 class="h5">Headphones</h3>
               <p class="text-sm text-muted">Elit ad est labore irure qui.</p></a></div>
         </div>

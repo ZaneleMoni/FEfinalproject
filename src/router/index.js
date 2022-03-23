@@ -1,13 +1,14 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
-import About from '../views/About.vue'
-import Blogs from '../components/Blogs.vue'
-import Contact from '../components/Contact.vue'
-import Paris from '../components/Paris'
-import Login from '../components/Login.vue'
-import Register from "../components/Register.vue"
-import Profile from "../components/Profile.vue"
-
+import { createRouter, createWebHistory } from "vue-router";
+import Home from "../views/Home.vue";
+import About from "../views/About.vue";
+import Blogs from "../components/Blogs.vue";
+import SingleBlog from "../components/SingleBlog.vue";
+import Contact from "../components/Contact.vue";
+import Paris from "../components/Paris";
+import Skincare from "../components/Skincare";
+import Login from "../components/Login.vue";
+import Register from "../components/Register.vue";
+import Profile from "../components/Profile.vue";
 
 const routes = [
   {
@@ -26,6 +27,11 @@ const routes = [
     component: Blogs,
   },
   {
+    path: "/blog/:id",
+    name: "SingleBlog",
+    component: SingleBlog,
+  },
+  {
     path: "/contact",
     name: "Contact",
     component: Contact,
@@ -40,7 +46,11 @@ const routes = [
     name: "Paris",
     component: Paris,
   },
-
+  {
+    path: "/skincare",
+    name: "Skincare",
+    component: Skincare,
+  },
   {
     path: "/register",
     name: "Register",
@@ -55,8 +65,8 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+});
 
 // router.beforeEach((to, from, next) => {
 //   const publicPages = ['/Login', '/Register', 'Home'];
@@ -67,4 +77,4 @@ const router = createRouter({
 //   else next()
 // });
 
-export default router
+export default router;

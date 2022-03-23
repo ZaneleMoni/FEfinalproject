@@ -31,11 +31,11 @@
           </div>
           <div class="col-lg-4 text-center">
             <ul class="list-inline text-white small mb-0">
-              <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-facebook-f"></i></a></li>
-              <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-twitter"></i></a></li>
-              <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-instagram"></i></a></li>
-              <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-linkedin"></i></a></li>
-              <li class="list-inline-item"><a class="reset-anchor" href="#!"><i class="fab fa-github"></i></a></li>
+              <li class="list-inline-item"><a class="reset-anchor" href="https://codepen.io/ZaneleMoni"><i class="fab fa-codepen"></i></a></li>
+              <li class="list-inline-item"><a class="reset-anchor" href="https://twitter.com/NtombizaneleMo2"><i class="fab fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a class="reset-anchor" href="https://www.instagram.com/moni_zanele/"><i class="fab fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a class="reset-anchor" href="https://www.linkedin.com/in/zanele-moni-b88559184/"><i class="fab fa-linkedin"></i></a></li>
+              <li class="list-inline-item"><a class="reset-anchor" href="https://github.com/ZaneleMoni"><i class="fab fa-github"></i></a></li>
             </ul>
           </div>
           <div class="col-lg-4 text-center text-lg-end">
