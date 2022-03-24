@@ -61,6 +61,7 @@ const routes = [
     name: "Profile",
     component: Profile,
   },
+  
 ];
 
 const router = createRouter({

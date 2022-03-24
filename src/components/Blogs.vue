@@ -18,28 +18,26 @@
                   >
                 </p>
                 <button
-                  type="edit"
+                  type="button"
                   class="btn btn-secondary"
                   data-bs-edit="modal"
                   data-bs-toggle="modal"
-                  data-bs-target="#addBlogModal"
-                  @click="editBlog()"
+                  data-bs-target="#editBlogModal"
+                  @click="editBlog(blog._id)"
                 >
                   edit
                 </button>
                 <button
-                  type="remove"
+                  type="button"
                   class="btn btn-danger"
-                  data-bs-delete="removeblog"
-                  @click="removeBlog()"
+                  v-on:click="removeBlog(blog._id)"
                 >
-                  delete
+                  Remove
                 </button>
               </div>
             </div>
           </div>
         </div>
-
         <div class="col-6 col-md-4"></div>
         <div class="col-6 col-md-4"></div>
       </div>
@@ -54,7 +52,7 @@
     <p class="sub">Add a Blog</p>
   </button>
 
-  <!-- Modal -->
+  <!-- Modal 1-->
   <div
     class="modal fade p-5"
     id="addBlogModal"
@@ -82,8 +80,7 @@
                 name="title"
                 id="addTitle"
                 v-model="title"
-                :disabled="!editBlog"
-                :class="{ view: !editBlog }"
+                
               />
             </div>
             <div class="mb-3">
@@ -93,8 +90,7 @@
                 name="content"
                 id="content"
                 v-model="content"
-                :disabled="!editBlog"
-                :class="{ view: !editBlog }"
+               
               />
             </div>
 
@@ -106,8 +102,7 @@
                 name="img"
                 id="addImg"
                 v-model="img"
-                :disabled="!editBlog"
-                :class="{ view: !editBlog }"
+                
               />
             </div>
           </form>
@@ -134,6 +129,83 @@
       </div>
     </div>
   </div>
+  <!-- Modal -->
+  <div
+    class="modal fade p-5"
+    id="editBlogModal"
+    tabindex="1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form @submit.prevent="newBlog">
+            <div class="mb-3">
+              <label for="addTitle" class="form-label">Title</label>
+              <input
+                class="form-control"
+                type="text"
+                name="title"
+                id="addTitle"
+                v-model="title"
+               
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Content</label>
+              <input
+                class="form-control"
+                name="content"
+                id="content"
+                v-model="content"
+               
+              />
+            </div>
+
+            <div class="mb-6">
+              <label for="addImg" class="form-label">Image</label>
+              <input
+                class="form-control"
+                type="text"
+                name="img"
+                id="addImg"
+                v-model="img"
+                
+              />
+            </div>
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+
+          <button
+            type="button p-5"
+            class="btn btn-primary"
+            data-bs-dismiss="modal"
+            @click="saveBlog(blog._id)"
+          >
+          Save
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -147,29 +219,23 @@ export default {
     };
   },
   methods: {
-    removeBlog() {
-      fetch("https://my-blogyy.herokuapp.com/blogs", {
+    removeBlog(id) {
+      console.log(id);
+      fetch("https://my-blogyy.herokuapp.com/blogs/" + id, {
         method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          title: this.title,
-          content: this.content,
-          img: this.img,
-        }),
       })
         .then((response) => response.json())
         .then((data) => {
-          console.log("Success:", data);
+          console.log(data);
+          alert("Blog removed successfully");
         })
         .catch((error) => {
           console.error("Error:", error);
         });
     },
 
-    editBlog() {
-      fetch("https://my-blogyy.herokuapp.com/blogs", {
+    editBlog(id) {
+      fetch("https://my-blogyy.herokuapp.com/blogs/" + id, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -189,6 +255,28 @@ export default {
         });
     },
 
+        saveBlog(id){
+            console.log(this.title, this.content, this.img);
+            fetch("https://my-blogyy.herokuapp.com/blogs/" + id, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          title: this.title,
+          content: this.content,
+          img: this.img,
+        }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Success:", data);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    },
+  
     createBlog() {
       console.log(this.title, this.content, this.img);
       fetch("https://my-blogyy.herokuapp.com/blogs", {

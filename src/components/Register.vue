@@ -92,7 +92,7 @@ methods:{
       .then((user)=>{
         console.log(user);
         alert("User registered");
-        localStorage.setItem("jwt",user.jwt);
+        localStorage.getItem("jwt",user.jwt);
         this.$router.push({name:"Login"});
       })
       .catch((err)=>{

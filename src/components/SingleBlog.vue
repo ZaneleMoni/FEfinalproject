@@ -1,5 +1,7 @@
 <template>
-  <h1>{{ blog._id }}</h1>
+  <h1>{{ blog.title }}</h1>
+  <p>{{blog.content}}</p>
+  <img :src="blog.img" alt="">
 </template>
 <script>
 export default {
@@ -27,4 +29,7 @@ export default {
   },
 };
 </script>
-<style scoped></style>
+
+<style scoped>
+
+</style>

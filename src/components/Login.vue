@@ -55,14 +55,14 @@ methods: {
       },
         })
         .then((response) => response.json())
-        .then((user) => {
-            console.log(user);
+        .then((users) => {
+            console.log(users);
             alert("User Logged in");
-            localStorage.setItem("jwt", user.jwt);
-            localStorage.setItem("id", user.id);
-            localStorage.setItem("name", user.name);
-            localStorage.setItem("email", user.email);
-            localStorage.setItem("phone_number",user.phone_number);
+            localStorage.setItem("jwt", users.jwt);
+            localStorage.setItem("id", users._id);
+            localStorage.setItem("name", users.name);
+            localStorage.setItem("email", users.email);
+            localStorage.setItem("phone_number",users.phone_number);
             this.$router.push({name:"Blogs"});
         })
         .catch((error) =>{
