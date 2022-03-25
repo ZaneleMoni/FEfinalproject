@@ -38,18 +38,25 @@ export default {
 data(){
     return {
         name: "",
-        password: ""
-        
+        password: "",
+    
     };
 },
+
 methods: {
     signin(){
-        fetch("https://my-blogyy.herokuapp.com/users",{
-      method:"POST",
-      body:JSON.stringify({
+      this.errorMessage = '';
+
+      const details = {
           name:this.name,
-          password:this.password
-      }),
+          password:this.password,
+         };
+               console.log(details);
+
+        fetch("https://my-blogyy.herokuapp.com/users/signin", {
+      method:"POST",
+      mode: "no-cors",
+      body:JSON.stringify(details),
       headers:{
           "Content-type":"application/json;charset=UTF-8",
       },

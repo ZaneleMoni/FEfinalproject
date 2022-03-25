@@ -75,14 +75,15 @@ data(){
 },
 methods:{
     signup(){
-      console.log(this.name, this.password);
-      fetch("https://my-blogyy.herokuapp.com/users/signup",{
+      console.log(this.name, this.password, this.email, this.phone_number);
+      fetch("https://my-blogyy.herokuapp.com/users/signup", {
         method:"POST",
+        // mode: "no-cors",
         body:JSON.stringify({
           name:this.name,
           email:this.email,
-        phone_number:this.phone_number,
-        password:this.password,
+          phone_number:this.phone_number,
+          password:this.password,
         }),
         headers:{
           "Content-type":"application/json;charset=UTF-8",

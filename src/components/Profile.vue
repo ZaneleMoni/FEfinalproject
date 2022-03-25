@@ -12,8 +12,8 @@
               width="100"
             />
           </button>
-          <span class="name mt-3">{{name}}</span>
-          <span class="idd">{{email}}</span>
+          <span class="name mt-3">{{ name }}</span>
+          <span class="idd">{{ email }}</span>
           <div
             class="d-flex flex-row justify-content-center align-items-center gap-2"
           >
@@ -24,16 +24,14 @@
             class="d-flex flex-row justify-content-center align-items-center mt-3"
           >
             <span class="number"
-              ><span class="phone_number">{{phone_number}}</span></span
+              ><span class="phone_number">{{ phone_number }}</span></span
             >
           </div>
           <div class="d-flex mt-2">
             <button class="btn1 btn-dark">Edit Profile</button>
           </div>
           <div class="text mt-3">
-            <span
-              >{{name}} is a full stack developer.<br /><br />
-            </span>
+            <span>{{ name }} is a full stack developer.<br /><br /> </span>
           </div>
           <div class="px-2 rounded mt-4 date">
             <!-- <span class="join">{{ date }}</span> -->
@@ -48,12 +46,15 @@
 export default {
   data() {
     return {
-      name: localStorage.getItem("name"),
-      email: localStorage.getItem("email"),
-      phone_number: localStorage.getItem("phone_number"),
-    }
+      name: localStorage.getItem("name") || null,
+      email: localStorage.getItem("email") || null,
+      phone_number: localStorage.getItem("phone_number") || null,
+    };
   },
-}
+  mounted() {
+    console.log(this.name);
+  },
+};
 </script>
 
 <style Scoped>
@@ -74,7 +75,6 @@ export default {
 .card:hover .image img {
   transform: scale(1.5);
 }
-
 
 .name {
   font-size: 22px;
