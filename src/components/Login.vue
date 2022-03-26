@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container11">
+    <div class="container11" id="login">
       <div class="row d-flex align-items-center justify-content-center">
         <div class="col-md-6">
           <div class="card1 px-5 py-5">
@@ -10,6 +10,7 @@
             <div class="form-input">
               <i class="fa fa-envelope"></i>
               <input
+              required
                 type="text"
                 class="form-control"
                 v-model="name"
@@ -19,7 +20,9 @@
 
             <div class="form-input">
               <i class="fa fa-lock"></i>
-              <input type="text"
+              <input 
+              required
+              type="password"
                class="form-control" 
                v-model="password"
                placeholder="password" />
@@ -42,7 +45,12 @@ data(){
     
     };
 },
-
+ 
+    logout() {
+      localStorage.clear();
+      alert("User logged out");
+    },
+  
 methods: {
     signin(){
       this.errorMessage = '';
@@ -320,7 +328,15 @@ form .create-account:hover {
     }
   }  
 }
-
+@media (min-width: 42/8px) {
+  .form-control {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+  }
+  .form-control {
+    padding: 50px 70px;
+  }
+}
 .error {
   color: red;
 }

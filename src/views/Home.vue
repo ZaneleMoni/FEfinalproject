@@ -14,7 +14,7 @@
           <h2>Backpack traveler</h2>
           <p>A place for your Instagram pictures or gallery.</p>
         </header>
-        <div class="row">
+        <div class="row text-center">
           <div class="col-lg-3 col-md-6 px-md-1 py-1"><a class="instagram-item d-block w-100 reset-anchor text-white" href="#!"><img class="img-fluid" src="https://d19m59y37dris4.cloudfront.net/travel/2-0/img/listing-tnumbnail-1.2aa0ba43.jpg" alt="">
               <div class="instagram-item-overlay p-5">
                 <h6>We travel not to escape life, but for life not to escape us.</h6>
@@ -56,7 +56,7 @@
           <h2>Cities You might be interested in</h2>
           <p>A place for your Instagram pictures or gallery.</p>
         </header>
-        <div class="row">
+        <div class="row text-center">
           <div class="col-lg-3 col-md-6 px-md-1 py-1"><a class="instagram-item d-block w-100 reset-anchor text-white" ><img class="img-fluid" src="https://i.postimg.cc/7Y7B0K6j/Paris-Adobe-Stock-264549883-1.jpg" alt="">
               <div class="instagram-item-overlay p-5">
                 <h6>Paris.</h6>

@@ -1,7 +1,12 @@
 <template>
+<div class="container read2">
+ <div id="read" >
+ <img :src="blog.img" alt="">
   <h1>{{ blog.title }}</h1>
   <p>{{blog.content}}</p>
-  <img :src="blog.img" alt="">
+ </div> 
+</div>
+
 </template>
 <script>
 export default {
@@ -31,5 +36,13 @@ export default {
 </script>
 
 <style scoped>
-
+#read{
+  margin: 0;
+ 
+  justify-content: right;
+}
+.read2{
+ text-align: center;
+width: 100%;
+}
 </style>
