@@ -50,7 +50,7 @@
     data-bs-toggle="modal"
     data-bs-target="#addBlogModal"
   >
-    Add a Blog
+    Add Blog
   </button>
 
   <!-- Modal 1-->
