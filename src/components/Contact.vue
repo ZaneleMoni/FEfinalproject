@@ -113,25 +113,25 @@ export default {
       message: "",
     };
   },
-  methods: {
-    handleSubmit() {
-      fetch("https://my-blogyy.herokuapp.com/contacts", {
-        method: "POST",
-        body: JSON.stringify({
-        name: this.name,
-        email: this.email,
-        subject: this.subject,
-        message: this.message,
-        }),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      })
-        .then((res) => res.json())
-        .then((json) => alert(json.msg))
-        .catch((err) => alert(err.msg));
+    methods: {
+      handleSubmit() {
+  fetch('https://my-blogyy.herokuapp.com/contacts', {
+    method: 'POST',
+    body: JSON.stringify({
+      name: this.name,
+      email: this.email,
+      subject: this.subject,
+      message: this.message,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
     },
-  },
+  })
+    .then((response) => response.json())
+    .then((data) =>(this.contact = data));
+    alert("Message successfully sent").catch((err)=> console.log(err.message));
+      },
+    },
 };
 </script>
 
