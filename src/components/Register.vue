@@ -70,7 +70,7 @@ data(){
       name:"",
       email:"",
       phone_number:"",
-      password:""
+      password:"",
    };
 },
 methods:{

@@ -144,8 +144,7 @@ export default {
   },
   methods: {
     removeBlog(id) {
-      console.log(id);
-      fetch("https://my-blogyy.herokuapp.com/blogs" + id, {
+      fetch("https://my-blogyy.herokuapp.com/blogs/" + id, {
         method: "DELETE",
       })
         .then((response) => response.json())
@@ -204,7 +203,7 @@ export default {
   },
   mounted() {
     if (localStorage.getItem("jwt")) {
-    fetch("https://my-blogyy.herokuapp.com/blogs")
+    fetch("https://my-blogyy.herokuapp.com/blogs/")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

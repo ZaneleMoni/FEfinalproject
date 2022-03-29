@@ -8,7 +8,6 @@ import Paris from "../components/Paris";
 import Skincare from "../components/Skincare";
 import Login from "../components/Login.vue";
 import Register from "../components/Register.vue";
-import Profile from "../components/Profile.vue";
 import Edit from "../components/Edit.vue";
 
 const routes = [
@@ -57,11 +56,7 @@ const routes = [
     name: "Register",
     component: Register,
   },
-  {
-    path: "/profile",
-    name: "Profile",
-    component: Profile,
-  },
+ 
   {
     path: "/edit",
     name: "Edit",
