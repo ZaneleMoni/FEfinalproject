@@ -145,7 +145,7 @@ export default {
   methods: {
     removeBlog(id) {
       console.log(id);
-      fetch("https://my-blogyy.herokuapp.com/blogs/" + id, {
+      fetch("https://my-blogyy.herokuapp.com/blogs" + id, {
         method: "DELETE",
       })
         .then((response) => response.json())
