@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="container1">
     <div class="container11" id="login">
       <div class="row d-flex align-items-center justify-content-center">
         <div class="col-md-6">
@@ -131,13 +131,23 @@ methods: {
   margin-bottom: 5rem;
 }
 
-.formP {
+/* .formP {
   display: flex;
   flex-direction: column;
   background: #fff;
   padding: 2rem;
   width: 530px;
   height: 380px;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+} */
+.formP {
+  
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
 }

@@ -144,16 +144,16 @@ export default {
   },
   methods: {
     removeBlog(id) {
-      fetch("https://my-blogyy.herokuapp.com/blogs" + id, {
-        method: "DELETE",
+      fetch("https://my-blogyy.herokuapp.com/blogs/" + id, {
+        method:"DELETE",
       })
-        .then((response) => response.json())
+        .then((res) => res.json())
         .then((data) => {
           console.log(data);
           alert("Blog removed successfully");
         })
-        .catch((error) => {
-          console.error("Error:", error);
+        .catch((err) => {
+          console.error("Error:", err);
         });
     },
 
@@ -170,12 +170,12 @@ export default {
           img: this.img,
         }),
       })
-        .then((response) => response.json())
+        .then((res) => res.json())
         .then((data) => {
           console.log("Success:", data);
         })
-        .catch((error) => {
-          console.error("Error:", error);
+        .catch((err) => {
+          console.err("Error:", err);
         });
     },
 
@@ -192,12 +192,12 @@ export default {
           img: this.img,
         }),
       })
-        .then((response) => response.json())
+        .then((res) => res.json())
         .then((data) => {
           console.log("Success:", data);
         })
-        .catch((error) => {
-          console.error("Error:", error);
+        .catch((err) => {
+          console.err("Error:", err);
         });
     },
   },
