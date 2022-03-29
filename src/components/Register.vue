@@ -78,7 +78,6 @@ methods:{
       console.log(this.name, this.password, this.email, this.phone_number);
       fetch("https://my-blogyy.herokuapp.com/users/signup", {
         method:"POST",
-        // mode: "no-cors",
         body:JSON.stringify({
           name:this.name,
           email:this.email,
@@ -89,7 +88,7 @@ methods:{
           "Content-type":"application/json;charset=UTF-8",
         },
       })
-      .then((response)=>response.json())
+      .then((res)=>res.json())
       .then((user)=>{
         console.log(user);
         alert("User registered");

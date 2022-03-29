@@ -4,7 +4,7 @@
       <div class="row d-flex align-items-center justify-content-center">
         <div class="col-md-6">
           <div class="card1 px-5 py-5">
-            <form class="formP" @submit.prevent="signin">
+            <form class="formP" @submit.prevent="login">
             <h3 class="mt-3">Login <br /></h3>
 
             <div class="form-input">
@@ -41,47 +41,40 @@ export default {
 data(){
     return {
         name: "",
-        password: "",
-    
+        password: ""
     };
 },
- 
-    logout() {
-      localStorage.clear();
-      alert("User logged out");
-    },
   
 methods: {
-    signin(){
-      this.errorMessage = '';
-
-      const details = {
+    login(){
+            console.log(this.name, this.password);
+      fetch("https://my-blogyy.herokuapp.com/users", {
+      method:"PATCH",
+      body:JSON.stringify({
           name:this.name,
           password:this.password,
-         };
-               console.log(details);
-
-        fetch("https://my-blogyy.herokuapp.com/users/signin", {
-      method:"POST",
-      mode: "no-cors",
-      body:JSON.stringify(details),
+        }),
+      
       headers:{
           "Content-type":"application/json;charset=UTF-8",
       },
+      
         })
-        .then((response) => response.json())
-        .then((users) => {
-            console.log(users);
-            alert("User Logged in");
-            localStorage.setItem("jwt", users.jwt);
-            localStorage.setItem("id", users._id);
-            localStorage.setItem("name", users.name);
-            localStorage.setItem("email", users.email);
-            localStorage.setItem("phone_number",users.phone_number);
-            this.$router.push({name:"Blogs"});
+        .then((res) => res.json())
+        .then((json) => {
+          if(json.jwt){
+            localStorage.setItem("jwt", json.jwt);
+          }
+          if (localStorage.getItem("jwt")){
+           this.$router.push({name:"Blogs"});
+          }
+          else{
+            alert("The username or password you entered is invalid")
+          }
+           
         })
-        .catch((error) =>{
-            alert(error);
+        .catch((err) =>{
+            alert(err);
         });
     },
 },
@@ -89,8 +82,6 @@ methods: {
 </script>
 
 <style Scoped>
-
-
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .lorem{
@@ -107,10 +98,6 @@ methods: {
   padding: 0;
   box-sizing: border-box;
 }
-
-/* body {
-  font-family: "Poppins", sans-serif;
-} */
 
 .content {
   position: absolute;
