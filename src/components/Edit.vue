@@ -23,7 +23,6 @@
             <p>Update your blog here.</p>
 
             <div class="form-input">
-              <i class="fa fa-lock"></i>
               <input
                 type="text"
                 class="form-control"
@@ -33,7 +32,6 @@
               />
             </div>
             <div class="form-input">
-              <i class="fa fa-lock"></i>
               <input
                 type="text"
                 class="form-control"
@@ -42,7 +40,6 @@
                 required
               />
               <div class="form-input">
-                <i class="fa fa-lock"></i>
                 <input
                   type="text"
                   class="form-control"
@@ -92,7 +89,7 @@ export default {
     this.title = this.blog.title;
     this.content = this.blog.content;
     this.img = this.blog.img;
-    
+
     // console.log("This is the blog I want to edit: ", this.blog);
   },
   methods: {
@@ -104,7 +101,6 @@ export default {
           title: this.title,
           content: this.content,
           img: this.img,
-          
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
@@ -125,6 +121,4 @@ export default {
 };
 </script>
 
-<style>
-
-</style>
+<style></style>

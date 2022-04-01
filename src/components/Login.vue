@@ -66,7 +66,6 @@ methods: {
             localStorage.setItem("jwt", json.jwt);
           }
           if (localStorage.getItem("jwt")){
-         localStorage.setItem("id", json._id);
           localStorage.setItem("name", json.name);
           localStorage.setItem("email", json.email);
           localStorage.setItem("phone_number", json.phone_number);

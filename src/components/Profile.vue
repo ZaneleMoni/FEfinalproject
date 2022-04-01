@@ -7,7 +7,7 @@
                     <div class="row m-l-0 m-r-0">
                         <div class="col-sm-4 bg-c-lite-green user-profile">
                             <div class="card-block text-center text-white">
-                                <h6 class="f-w-600">{{name}}</h6>
+                                <h6 class="f-w-600">{{ name }}</h6>
                                 <p>User Profile</p> <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                             </div>
                         </div>
@@ -16,11 +16,11 @@
                                 <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Information</h6>
                                 <div class="row">
                                     <div class="col-sm-6">
-                                        <p class="m-b-10 f-w-600">{{email}}</p>
+                                        <p class="m-b-10 f-w-600">{{ email }}</p>
                                         <h6 class="text-muted f-w-400">rntng@gmail.com</h6>
                                     </div>
                                     <div class="col-sm-6">
-                                        <p class="m-b-10 f-w-600">{{phone_number}}</p>
+                                        <p class="m-b-10 f-w-600">{{ phone_number }}</p>
                                         <h6 class="text-muted f-w-400">98979989898</h6>
                                     </div>
                                 </div>
@@ -43,7 +43,7 @@
 export default {
   data() {
     return {
-            id: localStorage.getItem("id"),
+
            name: localStorage.getItem("name"),
            email: localStorage.getItem("email"),
            phone_number: localStorage.getItem("phone_number"),
@@ -181,6 +181,6 @@ h6 {
     font-size: 20px;
     margin: 0 10px 0 0;
     -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out
+    transition: all 0.3s ease-in-out;
 }
 </style>
